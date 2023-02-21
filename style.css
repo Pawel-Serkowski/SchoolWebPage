@@ -38,6 +38,7 @@ body{
     position: sticky;
     top:0;
     left:0;
+    z-index:20;
 }
 
 .nav-links{
@@ -60,7 +61,7 @@ section{
     height:calc(100vh - 4rem);
     display:flex;
     align-items: center;
-    background-color: var(--gray-color);
+    /* background-color: var(--gray-color); */
     position:relative;
 }
 .movement-cards{
@@ -90,6 +91,7 @@ section{
     width:50%;
     height:100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--light-color);
@@ -98,14 +100,14 @@ section{
     transition: all 0.7s;
 
 }
-#c1{
+#guitar{
     background: url("./img/guitars.jfif");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: border-box;
 }
-#c2{
+#matrix{
     background: url("./img/matrix.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -116,4 +118,86 @@ section{
 .cards:hover{
     width:70%;
     filter:blur();
+}
+
+.cards a{
+    outline: none;
+    border:var(--light-color) 5px solid;
+    width:300px;
+    height:60px;
+    background:none;
+    border-radius: 12px;;
+    transition: all 0.5s;
+    font-size: 1.8rem;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cards a:hover{
+    background-color: var(--light-color);
+    color:black;
+    border-color:black;
+    cursor:pointer;
+}
+.cards h2{
+    font-size:5.5rem;
+}
+a.active li{
+    color:var(--active-color);
+}
+
+a li:hover{
+    transition: 0.3s ;
+    color:#F97F51;
+}
+
+.guitar{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    min-height:calc(100vh - 4rem);
+    overflow-x: hidden;
+
+
+}
+.video{
+    width:100%;
+    min-height:calc(100vh - 4rem);
+    position:sticky;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.guitars{
+    min-height:50vh;
+    width:100%;
+    display: flex;
+    z-index:2;
+    animation: scroller 15s infinite linear;
+
+
+    
+}
+.guitars img{
+    border-top:var(--light-color) 3px solid;
+    width:40%;
+}
+h6{
+    z-index:2;    
+    color:var(--light-color);
+    font-size:4rem;
+}
+
+@keyframes scroller {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
 }

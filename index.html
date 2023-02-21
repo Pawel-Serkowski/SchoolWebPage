@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>My Web</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>My Hobbies</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -14,8 +13,8 @@
 				MyHoobies
 			</h2>
 			<ul class="nav-links">
-				<a href=""><li>Home</li></a>
-				<a href=""><li>Gitara</li></a>
+				<a href="./index.html" class="active"><li>Home</li></a>
+				<a href="./guitar.html" ><li>Gitara</li></a>
 				<a href=""><li>Programowanie</li></a>
 			</ul>
 		</nav>
@@ -25,14 +24,14 @@
 				<span>
 					Najedź aby zobaczyć czym się interesuję
 				</span>
-				<div class="cards" id="c1">
+				<div class="cards full_card" id="guitar" >
 					<h2>Gitara</h2>
-					<button>Zobacz więcej</button>
+					<a href="./guitar.html">Zobacz więcej</a>
 				</div>
-				<div class="cards" id="c2">
+				<div class="cards empty_card" id="matrix">
 				</div>
 			</div>
 		</section>
+
 	</body>
-	<script src="pullMessage.js"></script>
 </html>
