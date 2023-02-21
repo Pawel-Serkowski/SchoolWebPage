@@ -4,6 +4,7 @@
     --main-color : #3B3B98;
     --light-color: #fff;
     --active-color: #F97F51;
+    --gray-color:#2c3e50;
 }
 
 *{
@@ -18,6 +19,7 @@ body{
     width:100%;
     min-height:100vh;
     font-family: 'Poppins';
+    position:relative;
 
 }
 
@@ -51,9 +53,67 @@ body{
     color: var(--active-color)
 }
 
-/*about*/
+/* about section */
 
-section.about{
+section{
     width:100%;
-    height:50vh;
+    height:calc(100vh - 4rem);
+    display:flex;
+    align-items: center;
+    background-color: var(--gray-color);
+    position:relative;
+}
+.movement-cards{
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+
+}
+.movement-cards span{
+    position:absolute;
+    z-index:1;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+    transition:all 0.5s ;
+}
+.movement-cards:hover span{
+    opacity:0;
+    font:0px;
+    z-index:0;
+
+}
+
+.cards{
+    width:50%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-color);
+    position: relative;
+    filter:blur(20px);
+    transition: all 0.7s;
+
+}
+#c1{
+    background: url("./img/guitars.jfif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+#c2{
+    background: url("./img/matrix.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+}
+
+.cards:hover{
+    width:70%;
+    filter:blur();
 }
